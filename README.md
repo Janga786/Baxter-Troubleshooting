@@ -1,7 +1,9 @@
 # Baxter Troubleshooting Tips
 
 Troubleshooting tips for keeping Baxter robots operational in 2025 and beyond.  
+
 This guide consolidates common fixes for boot issues, networking problems, ROS/Intera SDK errors, and hardware troubleshooting.
+
 ---
 
 ## 📖 Documentation
