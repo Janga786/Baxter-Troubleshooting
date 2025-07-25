@@ -1,0 +1,41 @@
+# Docker build artifacts
+.docker/
+docker-compose.override.yml
+
+# Shared workspace build artifacts  
+shared_ws/build/
+shared_ws/install/
+shared_ws/log/
+shared_ws/devel/
+
+# OS specific files
+.DS_Store
+Thumbs.db
+desktop.ini
+*.tmp
+
+# IDE files
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# Logs
+*.log
+logs/
+
+# Python cache
+__pycache__/
+*.pyc
+*.pyo
+
+# ROS build artifacts
+**/build/
+**/devel/
+**/install/
+**/log/
+
+# Temporary files  
+*.backup
+*.bak
