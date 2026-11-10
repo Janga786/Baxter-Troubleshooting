@@ -63,7 +63,7 @@ source ~/intera_ws/devel/setup.bash
 ```
 
 **10. enable_robot.py or joint_trajectory_action_server.py missing**  
-- Run `catkin_make` or `catkin_build` after troubleshooting.
+- Run `catkin_make` or `catkin build` after troubleshooting.
 
 **11. intera.sh script error**  
 - Ensure file is in root of catkin workspace:  
