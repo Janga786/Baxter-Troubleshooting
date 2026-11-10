@@ -2,20 +2,24 @@
 
 Troubleshooting tips for keeping Baxter robots operational in 2025 and beyond.  
 
-This guide consolidates common fixes for boot issues, networking problems, ROS/Intera SDK errors, and hardware troubleshooting.
+This guide collects fixes for boot issues, networking problems, ROS/SDK errors, and hardware problems.
+
+I wrote it in summer 2025 while reviving two Rethink robots (Baxter and Sawyer) during my research assistantship with Dr. Kevin Wedeward at Fort Lewis College. The Docker workstation I used with them is in [Baxter-Sawyer_Work_Station_Windows](https://github.com/Janga786/Baxter-Sawyer_Work_Station_Windows).
+
+Note: commands that use `intera.sh`, `intera_ws` or `intera_interface` are for Sawyer's Intera SDK. On Baxter the equivalents are `baxter.sh` and `baxter_tools` (for example `rosrun baxter_tools enable_robot.py -e`).
 
 ---
 
-## 📖 Documentation
+## Documentation
 Official docs are no longer maintained, but you can access archived versions here:  
 [Archived SDK Wiki](https://web.archive.org/web/20220312130557/https://sdk.rethinkrobotics.com/wiki/Home)
 
 ---
 
-## ⚡ Startup & Boot Issues
+## Startup & Boot Issues
 **1. Baxter not powering on / unresponsive screen**  
 - Power cycle at least 3 times, waiting 30 sec each time.  
-- If it still doesn’t work, go into FSD (Field Service Menu):  
+- If it still doesn’t work, go into the FSM (Field Service Menu):  
   **Press `Alt + F`** → reboot from there.
 
 **2. BIOS password lockout**  
@@ -29,7 +33,7 @@ Official docs are no longer maintained, but you can access archived versions her
 
 ---
 
-## 🌐 Networking & Communication
+## Networking & Communication
 **4. IP mismatch between Baxter and workstation**  
 - Set Baxter to Manual IP in FSM.
 
@@ -52,7 +56,7 @@ export ROS_MASTER_URI=http://baxter.local:11311
 
 ---
 
-## 🛠 ROS & Intera SDK Issues
+## ROS & Intera SDK Issues
 **9. Wrong catkin workspace sourcing**  
 ```bash
 source ~/intera_ws/devel/setup.bash
@@ -70,7 +74,7 @@ source ~/intera_ws/devel/setup.bash
 
 ---
 
-## 🤖 Hardware & Motion Problems
+## Hardware & Motion Problems
 **13. Arms not enabled or unresponsive**  
 ```bash
 rosrun intera_interface enable_robot.py -e
@@ -82,7 +86,7 @@ rosrun intera_interface enable_robot.py -e
 
 ---
 
-## 🔍 Testing, Debugging, & Logging
+## Testing, Debugging, & Logging
 **15. Check robot state:**  
 ```bash
 rostopic echo /robot/state
@@ -106,7 +110,9 @@ rostopic echo /robot/joint_states
 
 ---
 
-## ✅ Contribute
-If you have more tips or fixes, open a Pull Request or share an Issue!
+## Contribute
+If you have more tips or fixes, open a pull request or an issue.
 
----
+## License
+
+MIT. See [LICENSE](LICENSE).
